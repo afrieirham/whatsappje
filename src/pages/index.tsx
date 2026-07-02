@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
-import { Github, MoveRight } from "lucide-react";
+import { Github, MoveRight, Sparkles } from "lucide-react";
 import BackgroundPlayer from "next-video/background-player";
 
 import Footer from "@/components/molecule/footer";
@@ -16,6 +16,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export default function Index() {
   const [openItem, setOpenItem] = useState("1");
@@ -62,6 +63,16 @@ export default function Index() {
             wasep je, the open-source whatsapp link rotator, wasap.my
             alternative.
           </p>
+          <div className="mt-8">
+            <a href="https://waformlink.com">
+              <Badge className="cursor-pointer bg-purple-50 font-normal text-purple-700 ring-1 ring-purple-200 hover:bg-purple-100">
+                <div className="flex items-center gap-1">
+                  <Sparkles className="h-3 w-3" />
+                  <span>Want forms before chat? Try WaForm</span>
+                </div>
+              </Badge>
+            </a>
+          </div>
           <div className="mt-10 flex flex-col items-center justify-center gap-2 sm:flex-row">
             <SignedOut>
               <SignInButton forceRedirectUrl="/dashboard/links">

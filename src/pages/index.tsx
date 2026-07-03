@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
-import { Github, MoveRight, Sparkles } from "lucide-react";
+import { ExternalLink, Github, MoveRight } from "lucide-react";
 import BackgroundPlayer from "next-video/background-player";
 
 import Footer from "@/components/molecule/footer";
@@ -63,16 +63,6 @@ export default function Index() {
             wasep je, the open-source whatsapp link rotator, wasap.my
             alternative.
           </p>
-          <div className="mt-8">
-            <a href="https://waformlink.com">
-              <Badge className="cursor-pointer bg-purple-50 font-normal text-purple-700 ring-1 ring-purple-200 hover:bg-purple-100">
-                <div className="flex items-center gap-1">
-                  <Sparkles className="h-3 w-3" />
-                  <span>Want forms before chat? Try WaForm</span>
-                </div>
-              </Badge>
-            </a>
-          </div>
           <div className="mt-10 flex flex-col items-center justify-center gap-2 sm:flex-row">
             <SignedOut>
               <SignInButton forceRedirectUrl="/dashboard/links">
@@ -105,6 +95,22 @@ export default function Index() {
                 <span>Star us on GitHub</span>
               </Link>
             </Button>
+          </div>
+          <div className="mt-4">
+            <a href="https://waformlink.com">
+              <Badge className="cursor-pointer bg-green-100 text-green-700 ring-1 ring-green-200 hover:bg-green-100/70">
+                <div className="flex items-center gap-2">
+                  <div className="relative h-2 w-2">
+                    <div className="absolute bottom-0 top-0 h-2 w-2 rounded-full bg-green-500" />
+                    <div className="absolute bottom-0 top-0 h-2 w-2 animate-ping rounded-full bg-green-500" />
+                  </div>
+                  <span className="flex items-center gap-1">
+                    Need forms before chat? Try WaForm
+                    <ExternalLink className="h-3 w-3" />
+                  </span>
+                </div>
+              </Badge>
+            </a>
           </div>
         </div>
         <div className="mt-16 flex w-full items-center justify-center px-2">

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
-import { Check, Gift, MoveRight } from "lucide-react";
+import { Check, ExternalLink, Gift, Loader, MoveRight } from "lucide-react";
 
 import {
   Card,
@@ -64,6 +64,20 @@ function PricingTable({ showFree }: { showFree?: boolean }) {
                 <FeatureItem>Unlimited phone numbers</FeatureItem>
                 <FeatureItem>Phone number weightage</FeatureItem>
                 <FeatureItem>Link clicks count</FeatureItem>
+                <li className="flex items-center space-x-2">
+                  <Loader className="h-5 w-5 text-black" />
+                  <span className="flex items-center gap-2">
+                    Need forms before chat?
+                    <a href="https://waformlink.com">
+                      <Badge variant="outline">
+                        <div className="flex items-center gap-1">
+                          <span>Try WaForm for free</span>
+                          <ExternalLink className="h-3 w-3" />
+                        </div>
+                      </Badge>
+                    </a>
+                  </span>
+                </li>
               </ul>
             </CardContent>
             <CardFooter>
@@ -127,6 +141,20 @@ function PricingTable({ showFree }: { showFree?: boolean }) {
               <FeatureItem>Unlimited phone numbers</FeatureItem>
               <FeatureItem>Phone number weightage</FeatureItem>
               <FeatureItem>Link clicks count</FeatureItem>
+              <li className="flex items-center space-x-2">
+                <Loader className="h-5 w-5 text-black" />
+                <span className="flex items-center gap-2">
+                  Need forms before chat?
+                  <a href="https://waformlink.com">
+                    <Badge>
+                      <div className="flex items-center gap-1">
+                        <span>Try WaForm for free</span>
+                        <ExternalLink className="h-3 w-3" />
+                      </div>
+                    </Badge>
+                  </a>
+                </span>
+              </li>
             </ul>
           </CardContent>
           <CardFooter>

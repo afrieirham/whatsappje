@@ -126,7 +126,7 @@ export default function Index() {
       </div>
 
       {/* create links */}
-      <div className="flex w-full flex-col bg-white px-8 py-10 md:py-16">
+      <div className="flex w-full flex-col bg-white px-4 py-10 md:py-16">
         <div className="mx-auto mt-8 w-full max-w-screen-lg">
           <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2">
             <div className="flex w-full flex-col justify-center">
@@ -186,7 +186,7 @@ export default function Index() {
       </div>
 
       {/* generate QR code */}
-      <div className="w-full border-y bg-zinc-50 px-8 py-10 md:py-16">
+      <div className="w-full border-y bg-zinc-50 px-4 py-10 md:py-16">
         <div className="flex w-full flex-col-reverse gap-6 md:flex-row">
           <div className="w-full">
             <BackgroundPlayer
@@ -212,7 +212,7 @@ export default function Index() {
       </div>
 
       {/* link weigtage */}
-      <div className="w-full bg-white px-8 py-10 md:py-16">
+      <div className="w-full bg-white px-4 py-10 md:py-16">
         <div className="mx-auto flex w-full max-w-screen-lg flex-col gap-6 md:flex-row">
           <div className="flex w-full flex-col justify-center">
             <h3 className="max-w-lg text-3xl font-black">
@@ -237,7 +237,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div id="pricing" className="w-full border-t px-8 py-10 md:py-16">
+      <div id="pricing" className="w-full border-t px-4 py-10 md:py-16">
         <h2 className="text-center text-3xl font-black">
           Start now for free or Upgrade to Pro!
         </h2>

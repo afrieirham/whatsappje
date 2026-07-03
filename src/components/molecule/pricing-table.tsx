@@ -56,7 +56,7 @@ function PricingTable({ showFree }: { showFree?: boolean }) {
                   <span>billed {billing}.</span>
                 </p>
               </div>
-              <ul className="space-y-2">
+              <ul className="space-y-2 text-xs md:text-sm">
                 <FeatureItem>Links with random alphabet attached</FeatureItem>
                 <FeatureItem>2-second delay before redirect</FeatureItem>
                 <FeatureItem>QR Code (with our logo)</FeatureItem>
@@ -70,8 +70,8 @@ function PricingTable({ showFree }: { showFree?: boolean }) {
                     Need forms before chat?
                     <a href="https://waformlink.com">
                       <Badge variant="outline">
-                        <div className="flex items-center gap-1">
-                          <span>Try WaForm for free</span>
+                        <div className="flex items-center gap-1 text-xs md:text-sm">
+                          <span>Try WaForm</span>
                           <ExternalLink className="h-3 w-3" />
                         </div>
                       </Badge>
@@ -91,7 +91,7 @@ function PricingTable({ showFree }: { showFree?: boolean }) {
         )}
 
         {/* Pro Tier */}
-        <Card className="flex w-full max-w-none flex-col border-4 border-zinc-900 shadow-2xl sm:max-w-[50%]">
+        <Card className="flex w-full flex-col border-4 border-zinc-900 shadow-2xl">
           <CardHeader>
             <CardTitle className="text-2xl">Pro</CardTitle>
             <CardDescription>
@@ -133,7 +133,7 @@ function PricingTable({ showFree }: { showFree?: boolean }) {
                 <span className="text-xs">2 months free</span>
               </Badge>
             </div>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <FeatureItem>Premium Links (customizable slug)</FeatureItem>
               <FeatureItem>Instant redirect</FeatureItem>
               <FeatureItem>QR Code (custom logo and color)</FeatureItem>
@@ -147,8 +147,8 @@ function PricingTable({ showFree }: { showFree?: boolean }) {
                   Need forms before chat?
                   <a href="https://waformlink.com">
                     <Badge>
-                      <div className="flex items-center gap-1">
-                        <span>Try WaForm for free</span>
+                      <div className="flex items-center gap-1 text-xs sm:text-sm">
+                        <span>Try WaForm</span>
                         <ExternalLink className="h-3 w-3" />
                       </div>
                     </Badge>

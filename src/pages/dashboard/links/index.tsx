@@ -117,8 +117,17 @@ export default function Dashboard() {
             <p className="text-sm text-muted-foreground">
               Create your first link rotator now.
             </p>
-            <div className="mt-4">
+            <div className="mt-4 grid grid-cols-1 gap-2">
               <CreateLinkForm random={random} />
+              <Button variant="ghost" asChild>
+                <a
+                  href="https://waformlink.com"
+                  className="flex items-center gap-1"
+                >
+                  Need form before submit? Try WaForm
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </Button>
             </div>
           </div>
         </div>

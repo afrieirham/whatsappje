@@ -4,7 +4,14 @@ import { useEffect } from "react";
 
 import { useUser } from "@clerk/nextjs";
 
-import { AlertTriangle, Check, Home, Menu } from "lucide-react";
+import {
+  AlertTriangle,
+  Check,
+  ExternalLink,
+  Home,
+  Menu,
+  Sparkles,
+} from "lucide-react";
 
 import ClerkUserButton from "@/components/molecule/clerk-user-button";
 import SubscribeButton from "@/components/molecule/subscribe-button";
@@ -117,7 +124,8 @@ export default function DashboardLayout({
             <ClerkUserButton />
           </div>
         </header>
-        <main className="flex flex-1 flex-col overflow-scroll p-4 sm:p-8">
+        <main className="flex flex-1 flex-col gap-4 overflow-scroll p-4 sm:p-8">
+          <WaFormCTA />
           {plan === "free" && hasCustomSlugLinks && <CustomSlugWarningBanner />}
           {children}
         </main>
@@ -128,7 +136,7 @@ export default function DashboardLayout({
 
 function CustomSlugWarningBanner() {
   return (
-    <div role="alert" className="mb-4 flex gap-3 rounded-lg bg-black px-4 py-3">
+    <div role="alert" className="flex gap-3 rounded-lg bg-black px-4 py-3">
       <AlertTriangle className="h-5 w-5 shrink-0 text-white" />
       <div className="flex flex-1 flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <div>
@@ -140,6 +148,42 @@ function CustomSlugWarningBanner() {
         <SubscribeButton billing="monthly" variant="secondary">
           Upgrade
         </SubscribeButton>
+      </div>
+    </div>
+  );
+}
+
+function WaFormCTA() {
+  return (
+    <div className="md:max-w-lg">
+      <div className="rounded-lg border border-gray-200 bg-white p-4 text-black">
+        <div className="flex items-center gap-2">
+          <Sparkles className="h-4 w-4 text-purple-500" />
+          <p className="font-medium">
+            Introducing{" "}
+            <a href="https://waformlink.com" className="hover:underline">
+              WaFormLink.com
+            </a>
+          </p>
+        </div>
+        <p className="mt-2 text-sm text-muted-foreground">
+          WaForm is a new app I built. It&apos;s like WasepJe but you can add
+          forms for your leads to fill out before they contact you on WhatsApp.
+        </p>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Check it out! I think it&apos;s prety cool.
+        </p>
+
+        <p className="mt-2 text-sm text-muted-foreground">
+          – Afrie, creator of WasepJe
+        </p>
+        <Button
+          size="sm"
+          className="mt-4 flex w-full items-center gap-2 text-xs md:w-auto"
+          variant="secondary"
+        >
+          Check out WaForm <ExternalLink className="h-3 w-3" />
+        </Button>
       </div>
     </div>
   );

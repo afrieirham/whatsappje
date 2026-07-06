@@ -181,8 +181,11 @@ function WaFormCTA() {
           size="sm"
           className="mt-4 flex w-full items-center gap-2 text-xs md:w-auto"
           variant="secondary"
+          asChild
         >
-          Check out WaForm <ExternalLink className="h-3 w-3" />
+          <a href="https://waformlink.com">
+            Check out WaForm <ExternalLink className="h-3 w-3" />
+          </a>
         </Button>
       </div>
     </div>
